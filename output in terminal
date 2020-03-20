@@ -1,0 +1,25 @@
+$lex commentline.l
+$ cc lex.yy.c -ll
+$ ./a.out
+The number of multiple comment line : 2
+The number of single comment line : 3
+$ cat Input.c
+/*program to print hello world*/
+//thi is single comment line
+#include<stdio.h>
+int main()//main fun
+{
+printf("Hello World"); //print
+return 0;
+}
+/*end of proram*/
+
+$ cat Output.c
+
+
+#include<stdio.h>
+int main()
+{
+printf("Hello World");
+return 0;
+}
